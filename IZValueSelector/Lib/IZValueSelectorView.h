@@ -29,13 +29,16 @@
 
 @interface IZValueSelectorView : UIView <UITableViewDataSource,UITableViewDelegate>
 
+
 @property (nonatomic, assign) IBOutlet NSObject<IZValueSelectorViewDelegate> *delegate;
 @property (nonatomic, assign) IBOutlet NSObject<IZValueSelectorViewDataSource> *dataSource;
 @property (nonatomic, assign) BOOL shouldBeTransparent;
 @property (nonatomic, assign) BOOL horizontalScrolling;
 @property (nonatomic, strong) NSString *selectedImageName;
-@property (nonatomic, assign) BOOL debugEnabled;
 @property (nonatomic, assign) BOOL decelerates;
+@property (nonatomic,strong) UIColor *defaultCellColor;
+
+@property (nonatomic, assign) BOOL debugEnabled;
 
 - (void)selectRowAtIndex:(NSUInteger)index;
 - (void)selectRowAtIndex:(NSUInteger)index animated:(BOOL)animated;

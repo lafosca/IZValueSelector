@@ -209,6 +209,9 @@
         CGAffineTransform rotateTable = CGAffineTransformMakeRotation(M_PI_2);
         cell.transform = rotateTable;
     }
+    
+    [cell setBackgroundColor:[self defaultCellColor]];
+    
     return cell;
 }
 
